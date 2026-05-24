@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Consuelo García Atelier</title>
+  <meta name="description" content="Noticias, novedades y artículos del mundo de la moda artesanal de Consuelo García Atelier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Consuelo García <span>Atelier</span></a>
+      <button class="nav__toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colecciones.html">Colecciones</a></li>
+        <li><a href="atelier.html">Atelier</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav__cta">Pide tu cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Noticias</span>
+      <h1>Blog</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Artículo destacado -->
+      <div class="blog-hero-card">
+        <div class="blog-hero-card__img">
+          <img src="images/blog-1.jpg" alt="Premio Code 41" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>Imagen</div>'">
+        </div>
+        <div class="blog-hero-card__body">
+          <span class="label">Últimas noticias</span>
+          <span class="blog-card__date">2020</span>
+          <h2>Premio Code 41 de Moda</h2>
+          <p>Consuelo García Atelier gana el premio Code 41, un reconocimiento que pone en valor la moda artesanal española y el trabajo de las costureras de Utrera.</p>
+          <a href="blog/premio-code41.html" class="btn btn--dark">Leer más</a>
+        </div>
+      </div>
+
+      <!-- Resto de artículos -->
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card__img">
+            <img src="images/blog-2.jpg" alt="Colección MAGNANIMITY" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>Imagen</div>'">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">2020</span>
+            <h3>Debut de la colección MAGNANIMITY 20.20</h3>
+            <p>Presentamos nuestra primera colección, una celebración del color, la forma y la artesanía sevillana. Una oda a la alegría en tiempos difíciles.</p>
+            <a href="blog/magnanimity.html" class="blog-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card__img">
+            <img src="images/blog-3.jpg" alt="Tienda online" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>Imagen</div>'">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">2020</span>
+            <h3>Abrimos nuestra tienda online</h3>
+            <p>Ya puedes descubrir y contactar con nosotros para adquirir nuestras piezas desde cualquier lugar del mundo.</p>
+            <a href="blog/tienda-online.html" class="blog-card__link">Leer más →</a>
+          </div>
+        </article>
+        <!-- Añade aquí más artículos del blog siguiendo el mismo patrón -->
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav__logo">Consuelo García <span>Atelier</span></span>
+          <p>Pret à Couture. Prendas artesanales de edición limitada, hechas con amor en Utrera, Sevilla.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <a href="colecciones.html">Colecciones</a>
+          <a href="atelier.html">Atelier</a>
+          <a href="blog.html">Blog</a>
+          <a href="sobre-mi.html">Sobre mí</a>
+          <a href="contacto.html">Pide tu cita</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <p>+34 658 48 82 72</p>
+          <p>info@consuelogarciaatelier.com</p>
+          <p>Utrera, Sevilla</p>
+          <p style="margin-top:0.75rem;">Lun–Vie: 9:00–18:00<br>Sáb: 10:00–14:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Consuelo García Atelier. Todos los derechos reservados.</span>
+        <span>
+          <a href="aviso-legal.html" style="color:inherit">Aviso legal</a> ·
+          <a href="privacidad.html" style="color:inherit">Privacidad</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    }));
+  </script>
+
+</body>
+</html>

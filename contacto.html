@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pide tu cita — Consuelo García Atelier</title>
+  <meta name="description" content="Reserva una cita para consultas sobre diseño a medida, colecciones o cualquier pregunta sobre Consuelo García Atelier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Consuelo García <span>Atelier</span></a>
+      <button class="nav__toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colecciones.html">Colecciones</a></li>
+        <li><a href="atelier.html">Atelier</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav__cta active">Pide tu cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Hablemos</span>
+      <h1>Pide tu cita</h1>
+      <p style="margin: 1rem auto 0; max-width: 55ch;">Cuéntanos lo que necesitas y nos pondremos en contacto contigo para organizar tu consulta.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info de contacto -->
+        <div class="contact-info">
+          <span class="label">Encuéntranos</span>
+          <h2>Contacto</h2>
+          <div class="divider divider--left"></div>
+          <p>Puedes escribirnos, llamarnos o venir a visitarnos al taller. Estaremos encantadas de atenderte.</p>
+
+          <div class="contact-info__item">
+            <div>
+              <strong>Teléfono / WhatsApp</strong>
+              <a href="https://wa.me/34658488272">+34 658 48 82 72</a>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@consuelogarciaatelier.com">info@consuelogarciaatelier.com</a>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div>
+              <strong>Ubicación</strong>
+              <span>Utrera, Sevilla</span>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div>
+              <strong>Horario</strong>
+              <span>Lun–Vie: 9:00–18:00<br>Sáb: 10:00–14:00</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <h4 style="font-family: var(--heading); font-size: 1.1rem; margin-bottom: 0.75rem;">Síguenos</h4>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://instagram.com/consuelo.g.a.r.c.i.a" target="_blank" rel="noopener" style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--accent); padding-bottom: 2px; color: var(--accent);">Instagram</a>
+              <a href="https://facebook.com" target="_blank" rel="noopener" style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--accent); padding-bottom: 2px; color: var(--accent);">Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <!--
+          IMPORTANTE: Para que el formulario funcione en Cloudflare Pages
+          necesitas un servicio externo gratuito como Web3Forms.
+
+          1. Ve a https://web3forms.com y crea una cuenta con tu email
+          2. Te darán un "access key"
+          3. Sustituye TU_ACCESS_KEY_AQUI por ese código
+          4. Los mensajes llegarán al email de Consuelo
+        -->
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+          <input type="hidden" name="subject" value="Nueva solicitud de cita — Consuelo García Atelier">
+          <input type="hidden" name="redirect" value="">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo de consulta</label>
+            <select id="tipo" name="tipo">
+              <option value="">Selecciona una opción</option>
+              <option value="atelier">Diseño a medida (Atelier)</option>
+              <option value="coleccion">Consulta sobre colecciones</option>
+              <option value="info">Información general</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Cuéntanos tu idea *</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Describe el tipo de prenda, la ocasión, colores que te gustan, fecha aproximada que necesitas..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--dark" style="width: 100%; text-align: center; border: none; font-size: 0.75rem; cursor: pointer;">Enviar solicitud</button>
+
+          <div class="form-success" id="formSuccess">
+            ¡Mensaje enviado! Nos pondremos en contacto contigo en las próximas horas.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav__logo">Consuelo García <span>Atelier</span></span>
+          <p>Pret à Couture. Prendas artesanales de edición limitada, hechas con amor en Utrera, Sevilla.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <a href="colecciones.html">Colecciones</a>
+          <a href="atelier.html">Atelier</a>
+          <a href="blog.html">Blog</a>
+          <a href="sobre-mi.html">Sobre mí</a>
+          <a href="contacto.html">Pide tu cita</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <p>+34 658 48 82 72</p>
+          <p>info@consuelogarciaatelier.com</p>
+          <p>Utrera, Sevilla</p>
+          <p style="margin-top:0.75rem;">Lun–Vie: 9:00–18:00<br>Sáb: 10:00–14:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Consuelo García Atelier. Todos los derechos reservados.</span>
+        <span>
+          <a href="aviso-legal.html" style="color:inherit">Aviso legal</a> ·
+          <a href="privacidad.html" style="color:inherit">Privacidad</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    }));
+
+    // Gestión del formulario
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        const data = await res.json();
+        if (data.success) {
+          form.reset();
+          success.style.display = 'block';
+          btn.textContent = '¡Enviado!';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Error. Inténtalo de nuevo.';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
