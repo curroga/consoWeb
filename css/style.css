@@ -109,12 +109,46 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   width: 100%;
 }
 .nav__logo {
+  display: flex;
+  align-items: center;
   font-family: var(--heading);
   font-size: 1.25rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .nav__logo span { color: var(--accent); }
+.nav__logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+.footer-brand .nav__logo img { filter: invert(1) brightness(2); }
+
+/* ── Floating WhatsApp ── */
+.wa-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+}
+.wa-float svg { width: 30px; height: 30px; fill: white; }
+@media (max-width: 680px) {
+  .wa-float { bottom: 1rem; right: 1rem; width: 52px; height: 52px; }
+  .wa-float svg { width: 28px; height: 28px; }
+}
 .nav__links {
   display: flex;
   align-items: center;
