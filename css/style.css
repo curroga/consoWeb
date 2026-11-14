@@ -381,6 +381,8 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   height: 100%;
   object-fit: cover;
 }
+/* Landscape photos keep their full frame (e.g. the collection campaign image) */
+.about-split__img--landscape { aspect-ratio: 5/3; }
 .about-split__text { padding: 1rem 0; }
 .about-split__text p { margin-bottom: 1.5rem; }
 
