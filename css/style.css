@@ -521,6 +521,14 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 }
 
 /* ── Trayectoria page ── */
+.timeline__year {
+  font-family: var(--heading);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--accent);
+  text-align: center;
+  margin: 0 auto 1rem;
+}
 .timeline {
   list-style: none;
   position: relative;
@@ -544,14 +552,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   background: var(--cream);
 }
 .milestone__img img { width: 100%; height: 100%; object-fit: cover; }
-.milestone__year {
-  display: block;
-  font-family: var(--heading);
-  font-size: 3rem;
-  line-height: 1;
-  color: var(--accent);
-}
-.milestone__body h2 { font-size: 2rem; margin: 0.75rem 0 1rem; }
+.milestone__body h2 { font-size: 2rem; margin: 0 0 1rem; }
 
 /* ── Colecciones page ── */
 .colecciones-intro {
