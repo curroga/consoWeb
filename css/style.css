@@ -478,11 +478,12 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 
 /* ── Page hero (inner pages) ── */
 .page-hero {
-  padding: 5rem 0 3.5rem;
+  padding: 3rem 0 2.25rem;
   background: var(--cream);
   text-align: center;
 }
 .page-hero .label { display: block; }
+.page-hero h1 { font-size: clamp(2rem, 3.4vw, 2.75rem); }
 
 /* ── Sobre mí ── */
 .bio-grid {
@@ -524,7 +525,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 .section--tight-top { padding-top: 3rem; }
 .timeline__year {
   font-family: var(--heading);
-  font-size: 3.5rem;
+  font-size: 2rem;
   line-height: 1;
   color: var(--accent);
   text-align: center;
