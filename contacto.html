@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="Consuelo García Atelier">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://consuelogarciaatelier.com/contacto.html">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
     <div class="container">
       <span class="label">Hablemos</span>
       <h1>Pide tu cita</h1>
-      <p class="page-hero__intro">Cuéntanos lo que necesitas y nos pondremos en contacto contigo para organizar tu consulta.</p>
+      <p class="page-hero__intro">Escríbenos por WhatsApp o Instagram y organizamos tu consulta.</p>
     </div>
   </div>
 
@@ -86,71 +86,21 @@
             <h4>Síguenos</h4>
             <div class="social__links">
               <a href="https://instagram.com/consuelo.g.a.r.c.i.a" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
         </div>
 
-        <!-- Formulario -->
-        <!--
-          IMPORTANTE: Para que el formulario funcione en Cloudflare Pages
-          necesitas un servicio externo gratuito como Web3Forms.
-
-          1. Ve a https://web3forms.com y crea una cuenta con tu email
-          2. Te darán un "access key"
-          3. Sustituye TU_ACCESS_KEY_AQUI por ese código
-          4. Los mensajes llegarán al email de Consuelo
-        -->
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
-          <input type="hidden" name="subject" value="Nueva solicitud de cita — Consuelo García Atelier">
-          <input type="hidden" name="redirect" value="">
-          <input type="checkbox" name="botcheck" hidden>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nombre">Nombre *</label>
-              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-            </div>
-            <div class="form-group">
-              <label for="apellidos">Apellidos</label>
-              <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos">
-            </div>
+        <!-- Contact channels (form disabled for now) -->
+        <div class="contact-cta">
+          <span class="label">Pide tu cita</span>
+          <h2>Escríbenos</h2>
+          <div class="divider divider--left"></div>
+          <p>La forma más rápida de hablar con nosotras es por WhatsApp. Cuéntanos qué prenda tienes en mente, la ocasión y la fecha aproximada, y organizamos tu consulta.</p>
+          <div class="contact-cta__actions">
+            <a class="btn btn--dark contact-cta__btn" href="https://wa.me/34658488272?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a class="btn btn--outline contact-cta__btn" href="https://instagram.com/consuelo.g.a.r.c.i.a" target="_blank" rel="noopener">Escríbenos por Instagram</a>
           </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="tipo">Tipo de consulta</label>
-            <select id="tipo" name="tipo">
-              <option value="">Selecciona una opción</option>
-              <option value="atelier">Diseño a medida (Atelier)</option>
-              <option value="coleccion">Consulta sobre colecciones</option>
-              <option value="info">Información general</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">Cuéntanos tu idea *</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Describe el tipo de prenda, la ocasión, colores que te gustan, fecha aproximada que necesitas..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--dark btn--block">Enviar solicitud</button>
-
-          <div class="form-success" id="formSuccess">
-            ¡Mensaje enviado! Nos pondremos en contacto contigo en las próximas horas.
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -201,30 +151,6 @@
       toggle.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
     }));
-
-    // Gestión del formulario
-    const form = document.getElementById('contactForm');
-    const success = document.getElementById('formSuccess');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type=submit]');
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
-      try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-        const data = await res.json();
-        if (data.success) {
-          form.reset();
-          success.style.display = 'block';
-          btn.textContent = '¡Enviado!';
-        } else {
-          throw new Error();
-        }
-      } catch {
-        btn.textContent = 'Error. Inténtalo de nuevo.';
-        btn.disabled = false;
-      }
-    });
   </script>
 
 
