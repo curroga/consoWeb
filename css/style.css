@@ -577,6 +577,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   background: var(--cream);
 }
 .milestone__img img { width: 100%; height: 100%; object-fit: cover; }
+.milestone__img--top img { object-position: top; }
 .milestone__body h2 { font-size: 2rem; margin: 0 0 1rem; }
 .milestone--featured .milestone__body {
   background: var(--cream);
