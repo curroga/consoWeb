@@ -93,6 +93,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 .section--cream { background: var(--cream); }
 .text-center { text-align: center; }
 .text-center p { margin-inline: auto; }
+.section-head { margin-bottom: 3rem; }
 .label {
   display: inline-block;
   font-size: 0.7rem;
@@ -140,6 +141,27 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   border-color: var(--accent);
 }
 .btn--accent:hover { background: #a67820; border-color: #a67820; }
+.btn--block {
+  width: 100%;
+  text-align: center;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ── Spacing utilities ── */
+.mt-1 { margin-top: 1rem; }
+.mt-1-5 { margin-top: 1.5rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-2-5 { margin-top: 2.5rem; }
+.mt-4 { margin-top: 4rem; }
 
 /* ── Header / Nav ── */
 .site-header {
@@ -429,6 +451,21 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 }
 
 /* ── Contact form ── */
+.social { margin-top: 2rem; }
+.social h4 {
+  font-family: var(--heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+.social__links { display: flex; gap: 0.75rem; }
+.social__links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  color: var(--accent);
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -515,6 +552,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   transition: color 0.2s;
   max-width: none;
 }
+.footer-hours { margin-top: 0.75rem; }
 .footer-col a:hover { color: var(--accent); }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.12);
@@ -527,6 +565,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+.footer-bottom a { color: inherit; }
 
 /* ── Page hero (inner pages) ── */
 .page-hero {
@@ -536,6 +575,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 }
 .page-hero .label { display: block; }
 .page-hero h1 { font-size: clamp(2rem, 3.4vw, 2.75rem); }
+.page-hero__intro { margin: 1rem auto 0; max-width: 55ch; }
 
 /* ── Sobre mí ── */
 .bio-grid {
@@ -555,6 +595,7 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 .bio-text h2 { margin-bottom: 0.25rem; }
 .bio-text .divider { margin-left: 0; }
 .bio-text p { margin-bottom: 1.25rem; }
+.bio-text h3 { margin: 2rem 0 0.5rem; }
 .values-list { margin: 1.5rem 0 2rem; }
 .values-list li {
   padding: 0.6rem 0;
