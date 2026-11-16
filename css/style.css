@@ -340,6 +340,76 @@ p { font-size: 1rem; color: var(--text-muted); max-width: 65ch; }
 .collection-card__info h3 { font-size: 1.3rem; }
 .collection-card__info p { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 0.3rem; max-width: none; }
 
+a.collection-card { display: block; cursor: zoom-in; }
+a.collection-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ── Lightbox ── */
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(20, 18, 16, 0.94);
+  color: var(--white);
+}
+.lightbox::backdrop { background: rgba(20, 18, 16, 0.94); }
+.lightbox__figure {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3.5rem 4.5rem 2rem;
+}
+.lightbox__img {
+  max-width: 100%;
+  max-height: calc(100% - 3rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.lightbox__caption {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  text-align: center;
+}
+.lightbox__btn {
+  position: absolute;
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 2.75rem;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.lightbox__btn:hover, .lightbox__btn:focus-visible { opacity: 1; }
+.lightbox__btn:focus-visible { outline: 2px solid var(--accent); }
+.lightbox__close { top: 0.75rem; right: 0.75rem; }
+.lightbox__prev, .lightbox__next { top: 50%; transform: translateY(-50%); font-size: 3.5rem; }
+.lightbox__prev { left: 0.75rem; }
+.lightbox__next { right: 0.75rem; }
+.lightbox__count {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+body.lightbox-open { overflow: hidden; }
+@media (max-width: 680px) {
+  .lightbox__figure { padding: 3.5rem 0.5rem 4rem; }
+  .lightbox__prev, .lightbox__next { top: auto; bottom: 0.5rem; transform: none; }
+}
+
 /* Placeholder for images not yet added */
 .img-placeholder {
   width: 100%;
