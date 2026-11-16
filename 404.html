@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — Consuelo García Atelier</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon-192.png">
+  <link rel="stylesheet" href="/css/style.css?v=16">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo"><img src="/images/logo.webp" alt="Consuelo García Atelier" width="160" height="23"></a>
+      <button class="nav__toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/colecciones">Colecciones</a></li>
+        <li><a href="/atelier">Atelier</a></li>
+        <li><a href="/trayectoria">Trayectoria</a></li>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/contacto" class="nav__cta">Pide tu cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label">Error 404</span>
+      <h1>Página no encontrada</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container text-center">
+      <p>Lo sentimos, la página que buscas no existe o ha cambiado de dirección.</p>
+      <p class="mt-1">Puedes ver nuestras piezas o escribirnos para pedir tu cita.</p>
+      <div class="mt-2">
+        <a href="/colecciones" class="btn btn--outline">Ver colecciones</a>
+        <a href="/contacto" class="btn btn--accent">Pide tu cita</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav__logo"><img src="/images/logo.webp" alt="Consuelo García Atelier" width="180" height="26"></span>
+          <p>Pret à Couture. Prendas artesanales de edición limitada, hechas con amor en Utrera, Sevilla.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <a href="/colecciones">Colecciones</a>
+          <a href="/atelier">Atelier</a>
+          <a href="/trayectoria">Trayectoria</a>
+          <a href="/sobre-mi">Sobre mí</a>
+          <a href="/contacto">Pide tu cita</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <a href="tel:+34658488272">+34 658 48 82 72</a>
+          <a href="mailto:info@consuelogarciaatelier.com">info@consuelogarciaatelier.com</a>
+          <p>Utrera, Sevilla</p>
+          <p class="footer-hours">Lun–Vie: 9:00–18:00<br>Sáb: 10:00–14:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Consuelo García Atelier. Todos los derechos reservados.</span>
+        <span>
+          <a href="/aviso-legal">Aviso legal</a> ·
+          <a href="/privacidad">Privacidad</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the footer copyright year current (static 2026 is the no-JS fallback)
+    document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    }));
+  </script>
+
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" href="https://wa.me/34658488272?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 3C9.376 3 4 8.376 4 15.003c0 2.4.71 4.638 1.93 6.518L4 28.999l7.7-1.876a11.96 11.96 0 0 0 4.303.793c6.627 0 12.003-5.376 12.003-12.003C28.006 8.376 22.63 3 16.003 3zm0 21.992c-1.39 0-2.74-.345-3.928-.997l-.28-.157-4.578 1.115 1.137-4.405-.176-.292a9.943 9.943 0 0 1-1.114-4.253c0-5.49 4.467-9.957 9.957-9.957 5.49 0 9.957 4.467 9.957 9.957 0 5.49-4.467 9.989-9.975 9.989zm5.479-7.34c-.3-.15-1.78-.88-2.054-.98-.275-.1-.475-.15-.675.15-.2.3-.775.98-.95 1.18-.175.2-.35.225-.65.075-.3-.15-1.267-.466-2.413-1.487-.892-.795-1.495-1.776-1.671-2.077-.175-.3-.018-.462.132-.612.135-.135.3-.351.45-.526.15-.176.2-.3.3-.5.1-.2.05-.376-.025-.526-.075-.15-.675-1.625-.925-2.225-.244-.585-.493-.506-.675-.515l-.575-.011a1.108 1.108 0 0 0-.802.376c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.902 1.225 3.103.15.2 2.117 3.234 5.131 4.535.717.31 1.276.495 1.712.633.72.229 1.375.197 1.893.12.578-.087 1.78-.728 2.03-1.43.25-.701.25-1.302.175-1.428-.075-.126-.275-.2-.575-.351z"/></svg>
+  </a>
+
+</body>
+</html>

@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /aviso-legal
-Disallow: /privacidad
 
 Sitemap: https://consuelogarciaatelier.com/sitemap.xml
